@@ -3,7 +3,7 @@ const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const morgan = require('morgan');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(morgan('combined'));
 app.use(expressLayouts);
