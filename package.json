@@ -1,11 +1,11 @@
 {
   "name": "eproject-nodejs",
   "version": "1.0.0",
-  "description": "NodeJS Tutorial",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +18,8 @@
   "devDependencies": {
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "16.13.1"
   }
 }
