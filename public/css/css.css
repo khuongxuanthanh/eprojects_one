@@ -122,6 +122,181 @@ a {
     cursor: pointer;
 }
 
+/* CSS Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    animation: fadeIn linear 0.1s;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.modal__body {
+    --growth-from: 0.7;
+    --growth-to: 1;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    animation: growth linear 0.1s;
+}
+
+.modal-register {
+    /*display: none;*/
+}
+
+.modal-login {
+    display: none;
+}
+
+/* Auth modal */
+
+.auth-form {
+    width: 400px;
+    background-color: white;
+    border-radius: 8px;
+    /*display: none;*/
+}
+
+.auth-form__container {
+    padding: 0 32px;
+}
+
+.auth-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-form__heading {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.auth-form__switch-btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.auth-form__form {
+}
+
+.auth-form__input {
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    outline: none;
+}
+
+.auth-form__input:focus {
+    border-color: #888;
+}
+
+.auth-form__aside {
+    margin-top: 18px;
+}
+
+.auth-form__policy-text {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+    padding: 0 12px;
+}
+
+.auth-form__text-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.auth-form__controls {
+    margin-top: 32px;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.auth-form__controls-back {
+    margin-right: 8px;
+}
+
+.auth-form__socials {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.btn.btn--with-icon {
+    border: 1px solid #b7afae;
+    min-width: 104px;
+}
+
+.btn--with-icon-facebook {
+    font-size: 2rem;
+    color: #1877f2;
+}
+
+.btn--with-icon-google {
+    font-size: 2rem;
+    color: #FE5122;
+}
+
+.btn--with-icon-apple {
+    font-size: 2rem;
+    color: #000;
+}
+
+.auth-form__policy-text {
+    padding: 8px 0;
+}
+
+.auth-form__policy-text span {
+    color: #999;
+}
+
+.auth-form__policy-span {
+    font-size: 1.4rem;
+}
+
+.auth-form__or {
+    display: flex;
+    justify-content: space-between;
+    color: #999;
+    margin-top: 8px;
+}
+
+.auth-form__or-separate {
+    display: block;
+    width: 130px;
+    border-top: 1px solid #dcdbdb;
+    margin: 10px 0 0;
+}
+
+.auth-form__help {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.auth-form__help-link {
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
 /* Menu */
 menu {
     padding: 0;
@@ -417,10 +592,14 @@ menu {
 }
 
 .solar-item__img {
-    padding-top: 100%;
+    /*padding-top: 100%;*/
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 3px 3px 0 0;
+}
+
+.solar-item__img img {
+    width: 100%;
 }
 
 .solar-item__info {
@@ -518,177 +697,63 @@ th {
 
 /* End CSS Solar System */
 
-/* CSS Modal */
-.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    animation: fadeIn linear 0.1s;
+
+/* CSS Observing */
+
+/* Constellation */
+
+
+.constellation_item-1-img {
+    width: 300px;
 }
 
-.modal__overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.3);
+.constellation_list {
+    display: flex;
+    justify-content: space-between;
 }
 
-.modal__body {
-    --growth-from: 0.7;
-    --growth-to: 1;
-    margin: auto;
-    position: relative;
-    z-index: 1;
-    border-radius: 5px;
-    animation: growth linear 0.1s;
+.constellation_item img {
 }
 
-.modal-register {
-    /*display: none;*/
-}
-
-.modal-login {
-    display: none;
-}
-
-/* Auth modal */
-
-.auth-form {
-    width: 400px;
-    background-color: white;
-    border-radius: 8px;
-    /*display: none;*/
-}
-
-.auth-form__container {
-    padding: 0 32px;
-}
-
-.auth-form__header {
+/* CSS Pagination */
+.pagination {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    list-style: none;
+    border: none;
 }
 
-.auth-form__heading {
-    font-size: 2.2rem;
-    font-weight: 400;
+.pagination-item {
+    margin: 0 28px;
+}
+
+.pagination-item .pagination-item__link {
+    border: none;
+    background-color: #f5f5f5;
     color: var(--text-color);
-}
-
-.auth-form__switch-btn {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    cursor: pointer;
-}
-
-.auth-form__form {
-}
-
-.auth-form__input {
-    width: 100%;
-    height: 40px;
-    margin-top: 16px;
-    padding: 0 12px;
-    font-size: 1.4rem;
-    border: 1px solid var(--border-color);
     border-radius: 2px;
-    outline: none;
 }
 
-.auth-form__input:focus {
-    border-color: #888;
+.pagination-item-active:hover .pagination-item__link {
+    background-color: #ed5c3f;
+    color: var(--white-color);
+    text-decoration: none;
 }
 
-.auth-form__aside {
-    margin-top: 18px;
-}
-
-.auth-form__policy-text {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
+.pagination-item__link {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: #939393;
+    min-width: 40px;
+    height: 30px;
+    line-height: 3rem;
+    display: flex;
     text-align: center;
-    padding: 0 12px;
+    justify-content: center;
 }
 
-.auth-form__text-link {
-    color: var(--primary-color);
-    text-decoration: none;
-}
+.pagination-item__icon {
 
-.auth-form__controls {
-    margin-top: 32px;
-    justify-content: flex-end;
-    display: flex;
-}
-
-.auth-form__controls-back {
-    margin-right: 8px;
-}
-
-.auth-form__socials {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 8px;
-}
-
-.btn.btn--with-icon {
-    border: 1px solid #b7afae;
-    min-width: 104px;
-}
-
-.btn--with-icon-facebook {
-    font-size: 2rem;
-    color: #1877f2;
-}
-
-.btn--with-icon-google {
-    font-size: 2rem;
-    color: #FE5122;
-}
-
-.btn--with-icon-apple {
-    font-size: 2rem;
-    color: #000;
-}
-
-.auth-form__policy-text {
-    padding: 8px 0;
-}
-
-.auth-form__policy-text span {
-    color: #999;
-}
-
-.auth-form__policy-span {
-    font-size: 1.4rem;
-}
-
-.auth-form__or {
-    display: flex;
-    justify-content: space-between;
-    color: #999;
-    margin-top: 8px;
-}
-
-.auth-form__or-separate {
-    display: block;
-    width: 130px;
-    border-top: 1px solid #dcdbdb;
-    margin: 10px 0 0;
-}
-
-.auth-form__help {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 6px;
-}
-
-.auth-form__help-link {
-    font-size: 1.2rem;
-    text-decoration: none;
 }
