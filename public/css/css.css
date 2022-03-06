@@ -1,0 +1,694 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #ee4d2d;
+    --primary-color-rgba: rgba(238, 77, 43, 0.08);
+    --border-color: #dbdbdb;
+    --star-gold-color: #ffce3e;
+
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.grid__column-2_10 {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 20%;
+}
+
+.grid__column-3_10 {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 33.333%;
+    min-width: 189px;
+}
+
+.grid__column-5_10 {
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 50%;
+}
+
+/* CSS Production*/
+
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+/* CSS Header */
+
+.header {
+    height: 199px;
+    border-bottom: 1px solid #626262;
+    background: #000 url(../images/header-bg.jpg) no-repeat;
+    position: relative;
+}
+
+.header .moon {
+    width: 255px;
+    height: 82px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url(../images/moon.png) no-repeat;
+
+}
+
+.header .logo {
+    position: absolute;
+    bottom: 20px;
+    color: var(--white-color);
+}
+
+.header-user {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    color: #999;
+    font-size: 1.2rem;
+}
+
+.header-user button {
+    color: var(--black-color);
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Menu */
+menu {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    background: #000;
+    height: 46px;
+}
+
+.navbar .nav-layout {
+    display: inline-block;
+    margin: auto;
+}
+
+.nav-layout li{
+    display: inline-block;
+}
+
+.nav-layout li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav-layout li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+
+.navbar .search-btn {
+    float: right;
+    padding: 0 21px;
+}
+
+.navbar .search-btn:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.navbar .search-icon {
+    color: #ffffff;
+    line-height: 46px;
+    font-size: 16px;
+}
+
+/* CSS Footer */
+.footer {
+    background-color: var(--black-color);
+    min-height: 160px;
+}
+
+.footer-layout {
+    display: flex;
+}
+
+.footer-nav {
+    float: left;
+    padding-right: 32px;
+    padding-top: 32px;
+}
+
+.footer-nav ul {
+    float: left;
+    padding-right: 32px;
+}
+
+.footer-nav ul li {
+    list-style: none;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: var(--white-color);
+    line-height: 24px;
+    font-size: 1.4rem;
+}
+
+.social-list {
+    margin: auto 68px;
+}
+
+.social-list a {
+    padding: 8px;
+    color: var(--white-color);
+    font-size: 24px;
+}
+
+/* CSS Home */
+.home-layout {
+    /*width: 100%;*/
+}
+
+.home-header_img {
+    width: 100%;
+}
+
+.home-item {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+    border-top: 4px solid ;
+}
+
+.home-item h1 {
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.home-solar, .home-conste {
+    display: flex;
+    justify-content: space-between;
+}
+
+.solar_info, .conste-info{
+    width: 48%;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+.solar_info img, .conste-info img {
+    cursor: pointer;
+}
+
+.conste-info {
+    text-align: center;
+}
+
+.solar-img{
+    width: 100%;
+}
+
+
+/* CSS Equipment */
+
+.equipment{
+    width: 50%;
+}
+
+.equipment {
+    float: left;
+    width: 50%;
+    margin: 0 4% 0 0;
+}
+
+.equipment-item {
+    display: flex;
+    padding: 20px 0;
+}
+
+.featured {
+    float: left;
+    width: 40%;
+    margin: 0 0 0 4%;
+}
+
+.featured p {
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.equipment_img{
+    width: 24%;
+    padding-right: 16px;
+}
+
+.equipment_img img {
+    width: 100%;
+}
+
+.equipment_title{
+
+}
+
+/* Constellation */
+.constellation_item-1-img {
+    width: 300px;
+}
+
+.constellation_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.constellation_item img {
+}
+
+/* CSS Category */
+.category {
+    border-radius: 2px;
+    background-color: var(--white-color);
+}
+
+.category__heading {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    padding: 16px 20px 0;
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.category-list {
+    padding: 0 0 8px 0;
+    list-style: none;
+}
+
+.category-item {
+    position: relative;
+}
+
+.category-item:first-child::before {
+    display: none;
+}
+
+.category-item:before {
+    content: "";
+    position: absolute;
+    border-top: 1px solid #e1e1e1;
+    top: 0;
+    left: 16px;
+    right: 16px;
+}
+
+/*.category-item-active .category-item__link {*/
+/*    color: var(--primary-color);*/
+/*}*/
+
+.category-item__link {
+    position: relative;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 8px 20px;
+    display: block;
+    /*transition: right linear 0.1s;*/
+    /*right: 0;*/
+}
+
+.category-item__link:hover {
+    /*right: -4px;*/
+    color: var(--primary-color);
+    text-decoration: none;
+}
+/* End CSS Category */
+
+/* CSS News */
+.solar-layout p {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+
+.news-item__img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 3px 3px 0 0;
+    position: relative;
+}
+
+.news-item__img img {
+    width: 100%;
+}
+
+/* CSS Solar System */
+.solar h1 {
+    font-size: 32px;
+}
+
+.solar-layout {
+    margin-bottom: 10px;
+}
+
+.solar-item {
+    display: block;
+    margin-top: 10px;
+    background-color: var(--white-color);
+    position: relative;
+    border-radius: 3px 3px;
+    box-shadow: 0 0.1rem 0.2rem 0 rgba(0,0,0,0.1);
+    transition: transform ease-in 0.2s;
+    will-change: transform;
+    text-decoration: none;
+}
+
+.solar-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.1rem 2rem 0 rgba(0,0,0,0.05);
+    text-decoration: none;
+}
+
+.solar-item__img {
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 3px 3px 0 0;
+}
+
+.solar-item__info {
+    padding: 0 10px;
+}
+
+.solar-item__info h1 {
+    padding-bottom: 12px;
+    font-size: 1.8rem;
+    color: #000;
+}
+
+.solar-item__name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.8rem;
+    height: 86px;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+}
+/* Pham Dung */
+.bodysection{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+.box {
+    color: #ffffc0;
+    text-align: center;
+    background: #213452;
+    padding: 4px 10px 4px 10px;
+    border-style: double;
+    border-width: 6px;
+    border-color: white;
+    font-family: arial,helvetica, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+}
+.left {
+    margin-right: 6px;
+    float: left;
+}
+.stath1, .dath1 {
+    background: #244669;
+    color: #FFF;
+}
+
+.statr1 {
+    background: #EEF5FF;
+    color: #000;
+}
+.statr2 {
+    background: #DDE5FF;
+    color: #000;
+}
+.statr1 th {
+    border: 2px solid white;
+    padding: 1px 10px 1px 10px;
+    text-align: left;
+}
+.statr2 th {
+    border: 2px solid white;
+    padding: 1px 10px 1px 10px;
+    text-align: left;
+}
+.statr1 td {
+    border: 2px solid white;
+    padding: 1px 10px 1px 10px;
+    text-align: right;
+}
+.statr2 td {
+    border: 2px solid white;
+    padding: 1px 10px 1px 10px;
+    text-align: right;
+}
+
+.stat {
+    font-size: medium;
+    border-collapse: collapse;
+}
+.table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+}
+
+/* End CSS Solar System */
+
+/* CSS Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: fadeIn linear 0.1s;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.modal__body {
+    --growth-from: 0.7;
+    --growth-to: 1;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    animation: growth linear 0.1s;
+}
+
+.modal-register {
+    /*display: none;*/
+}
+
+.modal-login {
+    display: none;
+}
+
+/* Auth modal */
+
+.auth-form {
+    width: 400px;
+    background-color: white;
+    border-radius: 8px;
+    /*display: none;*/
+}
+
+.auth-form__container {
+    padding: 0 32px;
+}
+
+.auth-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-form__heading {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.auth-form__switch-btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.auth-form__form {
+}
+
+.auth-form__input {
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    outline: none;
+}
+
+.auth-form__input:focus {
+    border-color: #888;
+}
+
+.auth-form__aside {
+    margin-top: 18px;
+}
+
+.auth-form__policy-text {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+    padding: 0 12px;
+}
+
+.auth-form__text-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.auth-form__controls {
+    margin-top: 32px;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.auth-form__controls-back {
+    margin-right: 8px;
+}
+
+.auth-form__socials {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.btn.btn--with-icon {
+    border: 1px solid #b7afae;
+    min-width: 104px;
+}
+
+.btn--with-icon-facebook {
+    font-size: 2rem;
+    color: #1877f2;
+}
+
+.btn--with-icon-google {
+    font-size: 2rem;
+    color: #FE5122;
+}
+
+.btn--with-icon-apple {
+    font-size: 2rem;
+    color: #000;
+}
+
+.auth-form__policy-text {
+    padding: 8px 0;
+}
+
+.auth-form__policy-text span {
+    color: #999;
+}
+
+.auth-form__policy-span {
+    font-size: 1.4rem;
+}
+
+.auth-form__or {
+    display: flex;
+    justify-content: space-between;
+    color: #999;
+    margin-top: 8px;
+}
+
+.auth-form__or-separate {
+    display: block;
+    width: 130px;
+    border-top: 1px solid #dcdbdb;
+    margin: 10px 0 0;
+}
+
+.auth-form__help {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.auth-form__help-link {
+    font-size: 1.2rem;
+    text-decoration: none;
+}
