@@ -1,25 +1,25 @@
 {
-  "name": "eproject-nodejs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
+    "name": "eproject-nodejs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --inspect index.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+},
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "express-ejs-layouts": "^2.5.1"
-  },
-  "devDependencies": {
+},
+    "devDependencies": {
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
-  },
-  "engines": {
+},
+    "engines": {
     "node": "16.13.1"
-  }
+}
 }
