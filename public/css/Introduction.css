@@ -1,0 +1,17 @@
+.bodysection{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+.box {
+    color: #ffffc0;
+    text-align: center;
+    background: #213452;
+    padding: 4px 10px 4px 10px;
+    border-style: double;
+    border-width: 6px;
+    border-color: white;
+    font-family: arial,helvetica, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+}

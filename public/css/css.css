@@ -625,11 +625,7 @@ menu {
     -webkit-line-clamp: 5;
 }
 /* Pham Dung */
-.bodysection{
-    width: 1200px;
-    height: auto;
-    margin: 0 auto;
-}
+
 .box {
     color: #ffffc0;
     text-align: center;
