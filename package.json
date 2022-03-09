@@ -2,10 +2,10 @@
     "name": "eproject-nodejs",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "index.php",
     "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --inspect index.js"
+    "start": "nodemon --inspect index.php"
 },
     "keywords": [],
     "author": "",
