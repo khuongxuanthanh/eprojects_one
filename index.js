@@ -44,9 +44,52 @@ app.get('/Observing', (req, res) => {
 })
 
 app.get('/SolarSystem', (req, res) => {
-    res.render('solar')
+    res.render('solarsystem')
+})
+app.get('/SolarSystem/solarsystemintroduction', (req, res) => {
+    res.render('solar/solarsystemintroduction')
 })
 
+app.get('/SolarSystem/sun', (req, res) => {
+    res.render('solar/sun')
+})
+
+app.get('/SolarSystem/mercury', (req, res) => {
+    res.render('solar/mercury')
+})
+app.get('/SolarSystem/venus', (req, res) => {
+    res.render('solar/venus')
+})
+app.get('/SolarSystem/earth', (req, res) => {
+    res.render('solar/earth')
+})
+app.get('/SolarSystem/mars', (req, res) => {
+    res.render('solar/mars')
+})
+app.get('/SolarSystem/jupiter', (req, res) => {
+    res.render('solar/jupiter')
+})
+app.get('/SolarSystem/saturn', (req, res) => {
+    res.render('solar/saturn')
+})
+app.get('/SolarSystem/uranus', (req, res) => {
+    res.render('solar/uranus')
+})
+app.get('/SolarSystem/neptune', (req, res) => {
+    res.render('solar/neptune')
+})
+app.get('/SolarSystem/pluto', (req, res) => {
+    res.render('solar/pluto')
+})
+app.get('/SolarSystem/asteroids', (req, res) => {
+    res.render('solar/asteroids')
+})
+app.get('/SolarSystem/comets', (req, res) => {
+    res.render('solar/comets')
+})
+app.get('/SolarSystem/meteoroids', (req, res) => {
+    res.render('solar/meteoroids')
+})
 app.get('/Constellation', (req, res) => {
     res.render('constellation')
 })
