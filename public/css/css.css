@@ -131,13 +131,34 @@ a {
     left: 0;
     display: none;
     animation: fadeIn linear 0.1s;
+    z-index: 1;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-login {
+    display: none;
+}
+
+.modal-login.open {
+    display: flex;
+}
+
+.modal-register {
+    display: none;
+}
+
+.modal-register.open {
+    display: flex;
 }
 
 .modal__overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.81);
 }
 
 .modal__body {
@@ -148,14 +169,6 @@ a {
     z-index: 1;
     border-radius: 5px;
     animation: growth linear 0.1s;
-}
-
-.modal-register {
-    /*display: none;*/
-}
-
-.modal-login {
-    display: none;
 }
 
 /* Auth modal */
@@ -295,6 +308,18 @@ a {
 .auth-form__help-link {
     font-size: 1.2rem;
     text-decoration: none;
+}
+
+.close-login {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.close-login:hover {
+    background-color: rgba(255, 0, 0, 0.45);
 }
 
 /* Menu */

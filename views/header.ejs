@@ -22,22 +22,22 @@
        <div class="auth-form modal-register">
            <div class="auth-form__container">
                <div class="auth-form__header">
-                   <h3 class="auth-form__heading">Đăng ký</h3>
+                   <h3 class="auth-form__heading">REGISTER</h3>
                </div>
 
                <div class="auth-form__form">
-                   <div class="auth-form__group">
-                       <input type="number" class="auth-form__input" placeholder="Số điện thoại">
-                   </div>
+                   <label class="auth-form__group">
+                       <input type="number" class="auth-form__input" placeholder="Phone number">
+                   </label>
                </div>
 
                <div class="auth-form__controls">
-                   <button class="btn btn--primary">TIẾP THEO</button>
+                   <button class="btn btn--primary">NEXT</button>
                </div>
 
                <div class="auth-form__or">
                    <p>-----------------------------</p>
-                   <p>HOẶC</p>
+                   <p>OR</p>
                    <p>-----------------------------</p>
                </div>
 
@@ -58,14 +58,17 @@
 
                <div class="auth-form__aside">
                    <p class="auth-form__policy-text">
-                       Bằng việc đăng kí, bạn đã đồng ý với Shopee về<br/>
-                       <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a>&
-                       <a href="" class="auth-form__text-link">Chính sách bảo mật</a>
+                       By registering, you agree to Astronomy about<br/>
+                       <a href="" class="auth-form__text-link">Terms of Service</a>&
+                       <a href="" class="auth-form__text-link">Privacy Policy</a>
                    </p>
                    <p class="auth-form__policy-text auth-form__policy-span">
-                       <span>Bạn đã có tài khoản?</span>
-                       <a href="" class="auth-form__text-link">Đăng nhập</a>
+                       <span>Do you already have an account?</span>
+                       <button class="auth-form__text-link js-login-hide">Login</button>
                    </p>
+                   <div class="close-login js-closeR">
+                       <i class="fa-solid fa-xmark"></i>
+                   </div>
                </div>
            </div>
        </div>
@@ -74,30 +77,30 @@
        <div class="auth-form modal-login">
            <div class="auth-form__container">
                <div class="auth-form__header">
-                   <h3 class="auth-form__heading">Đăng nhập</h3>
+                   <h3 class="auth-form__heading">Login</h3>
                </div>
 
                <div class="auth-form__form">
-                   <div class="auth-form__group">
-                       <input type="text" class="auth-form__input" placeholder="Email/Số điện thoại/Tên đăng nhập">
-                   </div>
-                   <div class="auth-form__group">
-                       <input type="password" class="auth-form__input" placeholder="Mật khẩu">
-                   </div>
+                   <label class="auth-form__group">
+                       <input type="text" class="auth-form__input" placeholder="Email/Phone number/Use name">
+                   </label>
+                   <label class="auth-form__group">
+                       <input type="password" class="auth-form__input" placeholder="Password">
+                   </label>
                </div>
 
                <div class="auth-form__controls">
-                   <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                   <button class="btn btn--primary">LOGIN</button>
                </div>
 
                <div class="auth-form__help">
-                   <a href="" class="auth-form__help-link">Quên mật khẩu</a>
-                   <a href="" class="auth-form__help-link">Đăng nhập với SMS</a>
+                   <a href="" class="auth-form__help-link">Forgot password</a>
+                   <a href="" class="auth-form__help-link">Login with SMS</a>
                </div>
 
                <div class="auth-form__or">
                    <span class="auth-form__or-separate"></span>
-                   <p>HOẶC</p>
+                   <p>OR</p>
                    <span class="auth-form__or-separate"></span>
                </div>
 
@@ -118,11 +121,68 @@
 
                <div class="auth-form__aside">
                    <p class="auth-form__policy-text auth-form__policy-span">
-                       <span>Bạn mới biết đến shoppe?</span>
-                       <a href="" class="auth-form__text-link">Đăng ký</a>
+                       <span>New to Astronomy?</span>
+                       <button class="auth-form__text-link js-register-hide">Register</button>
                    </p>
+               </div>
+               <div class="close-login js-closeL">
+                   <i class="fa-solid fa-xmark"></i>
                </div>
            </div>
        </div>
    </div>
 </div>
+
+<script>
+    const modal = document.querySelector('.modal')
+    const modalContainer = document.querySelector('.modal__overlay')
+
+    const clickLogin = document.querySelector('.js-login-ticket')
+    const modalLogin = document.querySelector('.modal-login')
+    const removeLogin = document.querySelector('.js-register-hide')
+    const modalCloseL = document.querySelector('.js-closeL')
+
+    const clickRegister = document.querySelector('.js-register-ticket')
+    const modalRegister = document.querySelector('.modal-register')
+    const RemoveRegister = document.querySelector('.js-login-hide')
+    const modalCloseR = document.querySelector('.js-closeR')
+
+// click open login
+    function showLogin() {
+        modal.classList.add('open')
+        modalLogin.classList.add('open')
+        modalRegister.classList.remove('open')
+    }
+    clickLogin.addEventListener('click', showLogin)
+
+// click open register
+    function showRegister() {
+        modal.classList.add('open')
+        modalRegister.classList.add('open')
+        modalLogin.classList.remove('open')
+    }
+    clickRegister.addEventListener('click', showRegister)
+
+// hide login
+    function hideLogin() {
+        modalLogin.classList.remove('open')
+        modalRegister.classList.add('open')
+    }
+    removeLogin.addEventListener('click', hideLogin)
+
+// hide register
+    function hideRegister() {
+        modalRegister.classList.remove('open')
+        modalLogin.classList.add('open')
+    }
+    RemoveRegister.addEventListener('click', hideRegister)
+
+// hide modal
+
+    function hideModal() {
+        modal.classList.remove('open')
+    }
+    modalCloseL.addEventListener('click', hideModal)
+    modalCloseR.addEventListener('click', hideModal)
+    modalContainer.addEventListener('click', hideModal)
+</script>
