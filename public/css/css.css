@@ -421,7 +421,7 @@ ul {
 
 /* CSS Home */
 .home-layout {
-    /*width: 100%;*/
+    height: 100%;
 }
 
 .home-header_img {
@@ -430,7 +430,7 @@ ul {
 
 .home-item {
     max-width: 1200px;
-    margin: 0 auto 24px;
+    margin: 0 auto;
     border-top: 4px solid ;
 }
 
@@ -485,9 +485,6 @@ ul {
     width: 24%;
 }
 
-img {
-    width: 100%;
-}
 
 .equipment_img img {
 
@@ -659,9 +656,12 @@ img {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
+    text-align: justify;
 }
 /* Pham Dung */
-
+.body {
+    background: url(../images/bg-body.jpg) repeat left top;
+}
 .box {
     color: #ffffc0;
     text-align: center;
@@ -726,7 +726,190 @@ th {
     vertical-align: inherit;
     font-weight: bold;
 }
+/*Contact*/
+.btn3, #newsletter input {
+    background: url(../images/contact/interface.png) no-repeat;
+    background-position: 0 -108px;
+    height: 49px;
+    width: 222px;
+}
+.btn3 {
+    color: #fdfdfd;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: -3px 0 3px #053131;
+    text-transform: uppercase;
+}
+#contact form {
+    width: 709px;
+}
+#contact form ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#contact form ul li {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 18px;
+}
+#contact form ul li > label {
+    float: right;
+    color: #e8eff4;
+    display: inline-block;
+    font: italic 14px/36px 'PTSerif-Caption';
+    width: 230px;
+}
+#contact form ul li > label.msg {
+    margin-bottom: 60px;
+    padding-top: 80px;
+}
+#contact form ul li:hover > label {
+    color: #2da6fc;
+}
+#contact textarea {
+    float: left;
+    background-color: #fff;
+    color: #060606;
+    font: 14px/36px Arial, Helvetica, sans-serif;
+    height: 367px;
+    width: 450px;
+    border: 0;
+    margin: 0 10px 0 0;
+    padding-left: 10px;
+    overflow: auto;
+}
+#contact form ul li div {
+    display: inline-block;
+    width: 225px;
+    margin: 50px 0;
+    padding-left: 5px;
+}
+#contact form ul li div label {
+    color: #fcc43d;
+    display: inline-block;
+    font: 12px Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+#contact input[type='text'] {
+    background-color: #fff;
+    color: #060606;
+    font: 14px/36px Arial, Helvetica, sans-serif;
+    height: 36px;
+    width: 440px;
+    border: 0;
+    margin-right: 10px;
+    padding: 0 10px;
+}
+#contact input[type='checkbox'] {
+    background-position: 0 0;
+    height: 13px;
+    width: 12px;
+    border: 0;
+    margin-left: 0;
+    margin-right: 10px;
+    padding: 0;
+}
+#contact input[type='submit'] {
+    cursor: pointer;
+    border: 0;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+#contact div.checkbox label {
+    cursor: pointer;
+}
+/*------------------------------ CONTENTS ------------------------------*/
+#contents {
+    background: url(../images/contact/bg-content.png) repeat-x center top;
+    margin: 0 auto;
+}
+#contents h1, #featured h3 {
+    color: #fbfdfd;
+    font-style: italic;
+    margin: 0 0 18px;
+}
+#contents p {
+    color: #e8eff4;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    text-align: justify;
+}
+#contents p a {
+    color: #e8eff4;
+}
+#contents p a:hover {
+    color: #0aa3fa;
+}
+#contents p b {
+    display: block;
+}
+#contents .body {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+#contents .click-here {
+    float: right;
+    background: url(../images/contact/spacecraft.jpg) no-repeat center top;
+    display: inline-block;
+    height: 162px;
+    width: 301px;
+    margin-left: 20px;
+    text-align: center;
+}
+#contents .click-here h1 {
+    color: #addcfe;
+    font-style: italic;
+    line-height: 36px;
+    margin: 18px 0;
+}
+.contactbody {
+    width: 1300px;
+    margin: 0 auto;
+}
+/** main **/
+.main {
+    padding: 20px;
 
+}
+/** sidebar **/
+#sidebar {
+    float: right;
+    width: 490px;
+    padding: 20px;
+    height: 100%;
+}
+#sidebar ul {
+    list-style: none;
+    margin: 0 0 80px;
+    padding: 0;
+}
+#sidebar > ul li {
+    margin: 0 0 16px;
+}
+#sidebar > ul li img {
+    border: 4px solid #fff;
+    border-radius: 3px;
+}
+#sidebar > ul li a:hover {
+    filter:alpha(opacity=80);
+    opacity:0.8;
+}
+#sidebar .click-here {
+    background: url(../images/contact/spacecraft-dark.jpg) no-repeat center top;
+    display: inline-block;
+    height: 162px;
+    width: 221px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+/***Kết thúc phần của Dũng***/
 /* End CSS Solar System */
 
 
