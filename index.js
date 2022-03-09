@@ -33,7 +33,7 @@ app.get('/News/Stars-01', (req, res) => {
 app.get('/Observing', (req, res) => {
     res.render('observing')
 })
-
+//Phan cua Dũng******bắt đầu
 app.get('/SolarSystem', (req, res) => {
     res.render('solarsystem')
 })
@@ -81,6 +81,10 @@ app.get('/SolarSystem/comets', (req, res) => {
 app.get('/SolarSystem/meteoroids', (req, res) => {
     res.render('solar/meteoroids')
 })
+app.get('/Contact', (req, res) => {
+    res.render('contact')
+})
+//Kết thúc phần của dũng*************
 app.get('/Constellation', (req, res) => {
     res.render('constellation')
 })
