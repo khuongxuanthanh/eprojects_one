@@ -2,7 +2,7 @@ const path = require('path');
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const morgan = require('morgan');
-const port = 1402;
+const port = process.env.PORT || 1402;
 
 const app = express();
 
@@ -42,6 +42,7 @@ app.get('/News/Stars-01', (req, res) => {
 app.get('/Observing', (req, res) => {
     res.render('observing')
 })
+
 //Phan cua Dũng******bắt đầu
 app.get('/SolarSystem', (req, res) => {
     res.render('solarsystem')
